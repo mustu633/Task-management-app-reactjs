@@ -24,7 +24,6 @@ function AddTask() {
     return (
         <Card sx={{minWidth: 200, maxWidth: 500, mx: "auto", mt: 2 }}>
             <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                
                 <Typography variant="h6" textAlign="center">
                     Add New Task
                 </Typography>

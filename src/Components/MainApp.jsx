@@ -7,7 +7,7 @@ function MainApp() {
 
     return (
         <>
-            <Paper sx={{ minWidth: 500, maxWidth: 700, mx: "auto", mt: 0, p: 3, bg: "green",  backgroundColor: "primary.main" }}>
+            <Paper sx={{ minWidth: 500, maxWidth: 700, mx: "auto", mt: 0, p: 3, bg: "green", backgroundColor: "primary.main" }}>
                 <div className="app-container">
                     <Title />
                     <AddTask />

@@ -16,7 +16,6 @@ function TaskList() {
                 Task List
             </Typography>
             <hr />
-
             <List>
                 {tasks.map((item) => (
                     <ListItem key={item.id} disablePadding>

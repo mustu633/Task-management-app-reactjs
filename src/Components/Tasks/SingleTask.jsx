@@ -14,7 +14,7 @@ function SingleTask() {
     const currentTask = tasks.find(item => item.id === id);
 
     return (
-        <Paper sx={{maxWidth: 700, mx: "auto", mt: 3, p: 3}} >
+        <Paper sx={{ maxWidth: 700, mx: "auto", mt: 3, p: 3 }} >
             <h3>Detail: {currentTask.detail}.</h3>
             <p>id: {currentTask.id}</p>
             <hr />
@@ -26,7 +26,7 @@ function SingleTask() {
                 Go Back
             </Button>
         </ Paper>
-            )
+    )
 }
 
-            export default SingleTask;
+export default SingleTask;
