@@ -1,6 +1,6 @@
 import { useContext, useEffect, useId, useRef, useState } from "react";
 import TaskContext from "../TaskContext.jsx";
-import { TextField } from "@mui/material";
+import { Button, Card, CardContent, TextField, Typography } from "@mui/material";
 
 function AddTask() {
 
@@ -12,21 +12,42 @@ function AddTask() {
 
 
     function handleChange() {
-        console.log(inpRef.current);
+        setInpValue(inpRef.current.value)
     }
 
 
     function handleClick() {
         addTask(inpValue);
+        setInpValue("");
     }
 
     return (
-        <>
-            <TextField id="standard-basic" label="Standard" variant="standard" ref={inpRef} onChange={handleChange} value={inpValue}/>
-            {/* <input type="text" ref={inpRef} onChange={handleChange} /> */}
-            <button onClick={handleClick}>Add as new Task</button>
-        </>
-    )
+        <Card sx={{ maxWidth: 400, mx: "auto", mt: 5 }}>
+            <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                
+                <Typography variant="h6" textAlign="center">
+                    Add New Task
+                </Typography>
+
+                <TextField
+                    label="Task name"
+                    variant="filled"
+                    inputRef={inpRef}
+                    value={inpValue}
+                    onChange={handleChange}
+                    fullWidth
+                />
+
+                <Button
+                    variant="contained"
+                    onClick={handleClick}
+                >
+                    Add Task
+                </Button>
+
+            </CardContent>
+        </Card>
+    );
 }
 
 export default AddTask;
