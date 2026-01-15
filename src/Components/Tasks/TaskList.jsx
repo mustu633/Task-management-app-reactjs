@@ -7,21 +7,22 @@ function TaskList() {
     const { tasks } = useContext(TaskContext);
 
     return (
-        <Paper sx={{ maxWidth: 500, mx: "auto", mt: 3 }}>
+        <Paper sx={{ minWidth: 200, maxWidth: 500, mx: "auto", mt: 3 }}>
             <Typography
                 variant="h6"
                 textAlign="center"
-                sx={{ p: 2 }}
+                sx={{ p: 2, pb: 0 }}
             >
                 Task List
             </Typography>
+            <hr />
 
             <List>
                 {tasks.map((item) => (
                     <ListItem key={item.id} disablePadding>
                         <ListItemButton
                             component="a"
-                            href={`/app/task/${item.id}`}
+                            href={`/app/${item.id}`}
                         >
                             <ListItemText
                                 primary={item.detail}

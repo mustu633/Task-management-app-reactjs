@@ -1,7 +1,10 @@
+import { Typography } from "@mui/material";
+
 function Title() {
 
     return (
-        <h2>Task Management App Reactjs</h2>
+        // <h2 className="title">Task Management App Reactjs</h2>
+        <Typography variant="h5" sx={{ color: "#fff", fontWeight: 600 }}>Todo App</Typography>
     )
 }
 

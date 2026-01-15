@@ -11,7 +11,7 @@ function Pages() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/app" element={<MainApp />} />
-                    <Route path="/app/task/:id" element={<SingleTask />} />
+                    <Route path="/app/:id" element={<SingleTask />} />
                 </Routes>
             </Router>
         </>

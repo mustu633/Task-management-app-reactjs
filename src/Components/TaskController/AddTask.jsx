@@ -22,7 +22,7 @@ function AddTask() {
     }
 
     return (
-        <Card sx={{ maxWidth: 400, mx: "auto", mt: 5 }}>
+        <Card sx={{minWidth: 200, maxWidth: 500, mx: "auto", mt: 2 }}>
             <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
                 
                 <Typography variant="h6" textAlign="center">
@@ -30,7 +30,7 @@ function AddTask() {
                 </Typography>
 
                 <TextField
-                    label="Task name"
+                    label="Task Details ..."
                     variant="filled"
                     inputRef={inpRef}
                     value={inpValue}
